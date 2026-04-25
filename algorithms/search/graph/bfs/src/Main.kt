@@ -14,5 +14,17 @@ fun main() {
         println("node: ${node.key} distance is ${node.value}")
     }
 
+    val path = BFSShortestPath().bfsShortestPath(graph, 1, 4)
+    path.forEach {
+        print("$it, ")
+    }
+
+    val shortest = BFSShortestDistance().shortestDistance(
+        graph,
+        1,
+        4
+    )
+    println(shortest)
+
 
 }
