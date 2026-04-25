@@ -8,22 +8,33 @@ fun main() {
     )
 
     BFSBasic().bfs(graph, 1)
+    println()
 
     val distance = BFSDistance().bfsDistance(graph, 1)
     for (node in distance) {
         println("node: ${node.key} distance is ${node.value}")
     }
+    println()
 
     val path = BFSShortestPath().bfsShortestPath(graph, 1, 4)
-    path.forEach {
-        print("$it, ")
+    if (path.isNotEmpty()) {
+        println("shortest path is ")
+        path.forEach {
+            print("$it, ")
+        }
+        println()
+    } else {
+        println("there is no path")
     }
+
+
 
     val shortest = BFSShortestDistance().shortestDistance(
         graph,
         1,
         4
     )
+    println("shortest distance is ")
     println(shortest)
 
 

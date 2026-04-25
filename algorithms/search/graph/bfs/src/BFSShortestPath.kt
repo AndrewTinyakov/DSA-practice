@@ -24,6 +24,7 @@ class BFSShortestPath {
                 if (neighbor !in visited) {
                     queue.add(neighbor)
                     visited.add(neighbor)
+                    parent[neighbor] = current
                 }
             }
         }
